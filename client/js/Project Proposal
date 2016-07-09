@@ -1,0 +1,18 @@
+Project Proposal
+
+A web-based Medicaid billing and service tracking app for agencies providing services to people with developmental disabilities.
+
+Technologies Used
+MongoDB
+(storing consumer and employee data)
+Alexa voice reocgnition API
+(providing voice input and 'challenge questions' to document that employee is present/providing services)
+React and React native
+(Clean framework for clear display of data)
+
+Tracks employees hours based on medicaid based 15 minute incements, generates an upload file for billing based on hours recorded.
+
+
+
+Open weather api key
+fe96a3e1611ec2b7c051b6b642af8eb9
