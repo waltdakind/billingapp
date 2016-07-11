@@ -15,15 +15,18 @@ gulp.task('copy', function () {
   gulp.src('./client/img/*')
     .pipe(gulp.dest('build/img'));
 
-  gulp.src('./bower_components/foundation-apps/iconic/*')
-    .pipe(gulp.dest('build/img/iconic'));
+  gulp.src('./client/resources/*')
+    .pipe(gulp.dest('build/resources/*'));
+
+  // gulp.src('./bower_components/foundation-apps/iconic/*')
+  //   .pipe(gulp.dest('build/img/iconic'));
 });
 
 gulp.task('sass', function () {
   return  gulp.src(['./client/scss/**/*.{scss,sass}'])
               .pipe(sass({ loadPath : ['bower_components', 'node_modules'],}))
                .on('error', function (err) { console.log(err.message); })
-              .pipe(gulp.dest('./build/css'));
+              .pipe(gulp.dest(['./build/css','./build/resources']));
 });
 
 gulp.task('server', function (callback) {

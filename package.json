@@ -22,6 +22,7 @@
     "passport-local-mongoose": "^4.0.0",
     "react": "^0.12.2",
     "react-foundation": "^0.6.8",
+    "react-materialize": "^0.14.4",
     "react-router": "^0.11.6"
   }
 }

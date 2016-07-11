@@ -5,8 +5,8 @@ var Employee = React.createClass({
     return (
        <div><h2>Welcome to Our Billing App</h2>
        <h3> This is the employee page. </h3>
-
-</div>
+       <a className="waves-effect waves-light btn">button</a>
+       </div>
     );
   }
 });
