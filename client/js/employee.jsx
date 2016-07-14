@@ -18,6 +18,8 @@ var addNote = function(x){
 	$('#noteContent').val('');
 }
 
+
+
 var Employee = React.createClass({
 
 	
