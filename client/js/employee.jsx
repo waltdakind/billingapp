@@ -1,4 +1,8 @@
 var React = require('react');
+
+var EmployeeInfo = require('./employeeinfo.jsx');
+var ConsumerInfo = require('./consumerInfo.jsx');
+
 var topMargin = {
 	marginTop: "20px"
 }
@@ -9,20 +13,14 @@ var noteStyle = {
 	paddingRight: "0px"
 }
 
-var handleClick = function(){
-	console.log("you clicked a button!");
-}
-
-var addNote = function(x){
-	$('#notes ul').append($('#noteContent').val()).append('<br>');
-	$('#noteContent').val('');
-}
-
-
-
 var Employee = React.createClass({
-
-	
+	_handleClick: function(){
+		alert("you clicked a button!");
+	},
+	_addNote: function(x){
+		$('#notes ul').append($('#noteContent').val()).append('<br>');
+		$('#noteContent').val('');
+	},
   render: function () {
     return (
         	<div className="row">
@@ -31,34 +29,10 @@ var Employee = React.createClass({
 	       			<a className="waves-effect waves-light btn col m3">SEARCH</a>
 	       		</div>
 	       		<div className="col m3 s12">
-	       			<div className="card">
-	       				<div className="card-image">
-	       					<img src="/../img/example-profile.jpg" />
-	       					<span className="card-title"><h3>John Doe</h3></span>
-	       				</div>
-	       				<div className="card-content">
-	       					<h5>Check in time: </h5>
-	       					<h5>Current time: </h5>
-	       				</div>
-	       				<div className="card-action">
-	       					<a className="waves-effect waves-light btn-large" onClick={handleClick}>CHECKOUT</a>
-	       				</div>	
-	       			</div>
+		       		<EmployeeInfo />
 	       		</div>
 	       		<div className="col m9 s12">
-       				<div className="card">
-       					<div className="card-title">
-       						<h3 className="text-center">Consumer Info</h3>
-       					</div>
-	       				<div className="card-content">
-		       				<h5>Name: </h5>
-		       				<h5>Address: </h5>
-		       				<h5>Phone: </h5>
-		       				<h5>Age: </h5>
-		       				<h5>DOB: </h5>
-		       				<h5>ID No: </h5>
-	       				</div>
-       				</div>
+       				<ConsumerInfo />
        				<div className="row">
        					<div className="col m3" style={medStyle}>
        						<div className="card">
@@ -83,7 +57,7 @@ var Employee = React.createClass({
 	       							<ul>
 	       							</ul>
 	       							<input className="col m9" type="text" id="noteContent"/>
-	       							<a className="waves-effect waves-light btn col m3" onClick={addNote}>ADD NOTE</a>
+	       							<a className="waves-effect waves-light btn col m3" onClick={this._addNote}>ADD NOTE</a>
 	       						</div>
        						</div>
        					</div>
