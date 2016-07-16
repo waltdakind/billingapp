@@ -12,22 +12,23 @@ var Employee = require('./employee');
 var App = React.createClass({
   render: function () {
     return (
-      <div className="grid-frame vertical">
-        <div className="grid-content shrink" style={{padding: 0}}>
-          <ul className="primary condense menu-bar">
-            <li><a><strong>Billing App</strong></a></li>
-            <li><Link to="login">Log in</Link></li>
-            <li><Link to="employee">Employee Page</Link></li>
-            <li><Link to="manager">Manager Page</Link></li>
-            <li><Link to="billing">Billing Report</Link></li>
-          </ul>
-        </div>
-        <div className="grid-content">
-          <div className="grid-container">
-            <RouteHandler />
-          </div>
-        </div>
+      <div className="overall">
+       <div className="navbar-fixed">
+    <nav>
+      <div className="nav-wrapper">
+        <Link to="app" className="brand-logo">Billing App</Link>
+        <ul className="right hide-on-med-and-down">
+          <li><Link to="employee">Employee</Link></li>
+          <li><Link to="manager">Manager</Link></li>
+          <li><Link to="billing">Billing Report</Link></li>
+        </ul>
       </div>
+    </nav>
+  </div>
+  <div className="container">
+      <RouteHandler />
+  </div>
+  </div>
     );
   }
 });
