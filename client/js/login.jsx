@@ -1,5 +1,6 @@
 var React = require('react');
-
+//TODO add button for registering new user
+//separate new user and login buttons to diff jsx  components
 var Login = React.createClass({
   render: function () {
     return (
