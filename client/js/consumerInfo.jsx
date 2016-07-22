@@ -5,7 +5,7 @@ var ConsumerInfo = React.createClass({
 		return (
 			<div className="card">
 				<div className="card-title">
-					<h3 className="text-center">Consumer Info</h3>
+					<h4 className="text-center">Consumer Info</h4>
 				</div>
 				<div className="card-content">
 	   				<h5>Name: </h5>

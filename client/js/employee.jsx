@@ -2,15 +2,27 @@ var React = require('react');
 
 var EmployeeInfo = require('./employeeinfo.jsx');
 var ConsumerInfo = require('./consumerInfo.jsx');
+var Notes = require('./notes');
+var Search = require('./search');
+var Medications = require('./medications');
 
 var topMargin = {
 	marginTop: "20px"
 }
 var medStyle = {
-		paddingLeft: "0px"
+		paddingLeft: "0px",
+		minHeight: "175px"
 	}
 var noteStyle = {
 	paddingRight: "0px"
+}
+
+var minHeight = {
+	minHeight: '175px'
+}
+
+var marginLeft = {
+	marginLeft: '0'
 }
 
 var Employee = React.createClass({
@@ -25,41 +37,19 @@ var Employee = React.createClass({
     return (
         	<div className="row">
 	        	<div className="col m12" style={topMargin}>
-	        		<input className="input-field col m9" type="text"/>
-	       			<a className="waves-effect waves-light btn col m3">SEARCH</a>
+	        		<Search />
 	       		</div>
-	       		<div className="col m3 s12">
+	       		<div className="col m4 s12">
 		       		<EmployeeInfo />
 	       		</div>
-	       		<div className="col m9 s12">
+	       		<div className="col m8 s12">
        				<ConsumerInfo />
-       				<div className="row">
-       					<div className="col m3" style={medStyle}>
-       						<div className="card">
-       						<div className="card-title">
-       							<h4 className="text-center">Medications</h4>
-       						</div>
-	       						<div className="card-content">
-	       							<ul>
-	       								<li>Med 1</li>
-	       								<li>Med 2</li>
-	       								<li>Med 3</li>
-	       							</ul>
-	       						</div>
-       						</div>
-       					</div>
-       					<div className="col m9" style={noteStyle}>
-       						<div className="card">
-       							<div className="card-title">
-       								<h4 className="text-center">Notes</h4>
-       							</div>
-	       						<div className="card-content" id="notes">
-	       							<ul>
-	       							</ul>
-	       							<input className="col m9" type="text" id="noteContent"/>
-	       							<a className="waves-effect waves-light btn col m3" onClick={this._addNote}>ADD NOTE</a>
-	       						</div>
-       						</div>
+       				<div className="row" style={marginLeft}>
+       					<div className="col m12 l3" style={medStyle}>
+       						<Medications />
+       					</div>	
+       					<div className="col m12 l9" style={medStyle}>
+       						<Notes />
        					</div>
 
        				</div>

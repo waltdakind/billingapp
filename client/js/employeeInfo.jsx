@@ -1,5 +1,7 @@
 var React = require('react');
 
+
+
 var EmployeeInfo = React.createClass({
 	render: function(){
 		return (
@@ -13,7 +15,7 @@ var EmployeeInfo = React.createClass({
    					<h5>Current time: </h5>
    				</div>
    				<div className="card-action">
-   					<a className="waves-effect waves-light btn-large" onClick={this._handleClick}>CHECKOUT</a>
+   					<a className="waves-effect waves-light button expand btn blue darken-4" onClick={this._handleClick}>CHECKOUT</a>
    				</div>	
    			</div>
 		)

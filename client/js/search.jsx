@@ -6,7 +6,7 @@ var Search = React.createClass({
 		return (
 			<div>
         		<input className="input-field col m9" type="text"/>
-       			<a className="waves-effect waves-light btn col m3">SEARCH</a>
+       			<a className="waves-effect waves-light btn blue darken-4 col m3">SEARCH</a>
    			</div>
 		)
 	}

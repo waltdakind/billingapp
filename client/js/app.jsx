@@ -7,6 +7,7 @@ var Billing = require('./billing');
 var Manager = require('./manager');
 var Employee = require('./employee');
 
+
 //import Foundation from 'react-foundation';
 
 var App = React.createClass({
@@ -15,7 +16,7 @@ var App = React.createClass({
       <div className="overall">
        <div className="navbar-fixed">
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper blue darken-4">
         <Link to="app" className="brand-logo">Billing App</Link>
         <ul className="right hide-on-med-and-down">
           <li><Link to="employee">Employee</Link></li>

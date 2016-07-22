@@ -1,11 +1,15 @@
 var React = require('react');
 
+var medHeight = {
+	minHeight: "inherit"
+}
+
 var Medications = React.createClass({
 	render: function(){
 		return (
-			<div className="card">
+			<div className="card" style={medHeight}>
 				<div className="card-title">
-					<h4 className="text-center">Medications</h4>
+					<h5 className="text-center">Medications</h5>
 				</div>
 				<div className="card-content">
 					<ul>
